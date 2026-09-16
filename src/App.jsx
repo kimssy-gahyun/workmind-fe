@@ -5,6 +5,7 @@ import Layout from './components/Layout.jsx'
 import Login from './pages/Login.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Documents from './pages/Documents.jsx'
+import DocumentCreate from './pages/DocumentCreate.jsx'
 import DocumentDetail from './pages/DocumentDetail.jsx'
 import KnowledgeSearch from './pages/KnowledgeSearch.jsx'
 import './App.css'
@@ -47,6 +48,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/documents" element={<Documents />} />
+            <Route path="/documents/new" element={<DocumentCreate />} />
             <Route path="/documents/:id" element={<DocumentDetail />} />
             <Route path="/knowledge" element={<KnowledgeSearch />} />
             <Route path="/knowledge-search" element={<Navigate to="/knowledge" replace />} />

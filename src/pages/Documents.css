@@ -83,3 +83,81 @@
 .document-message.error {
   color: #b42318;
 }
+.documents-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.documents-create-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.documents-create-link:hover {
+  background: #182f50;
+}
+
+.documents-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.documents-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.documents-table th,
+.documents-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.documents-table th {
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.documents-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.documents-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.documents-table td:nth-child(3),
+.documents-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.documents-table .documents-file-size {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.documents-table a {
+  color: #243f64;
+  text-underline-offset: 3px;
+}
+
+.documents-table a:hover {
+  color: #1d4ed8;
+}
+
+.documents-table a:focus-visible,
+.documents-table-wrapper:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
