@@ -95,3 +95,20 @@ h1 {
     padding: 24px;
   }
 }
+.session-status {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.session-status button {
+  padding: 10px 16px;
+  border: 1px solid #cfd6e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #243f64;
+  font: inherit;
+  cursor: pointer;
+}
