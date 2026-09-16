@@ -1,18 +1,28 @@
-# React + Vite
+# WorkMind_FE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WorkMind의 프론트엔드 프로젝트입니다.
 
-Currently, two official plugins are available:
+## 프로젝트 개요
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+WorkMind는 업무 중 생성되는 문서를 관리하고,
+필요한 정보를 검색하고 활용할 수 있도록 만든 업무 지원 서비스입니다.
 
-## React Compiler
+문서 관리와 AI 분석 결과 확인,
+RAG 기반 지식 검색 및 질의응답을 위한 사용자 화면을 제공합니다.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 주요 화면
 
-Note: This will impact Vite dev & build performances.
+- 로그인
+- 대시보드
+- 문서 관리
+- 문서 상세 및 분석 결과
+- 지식 검색
+- 질의 이력
 
-## Expanding the ESLint configuration
+## 기술 스택
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- React Router
+- Axios
