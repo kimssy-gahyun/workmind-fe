@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { useAuth } from '../auth/AuthContext.js'
 
 const navigation = [
   { to: '/dashboard', label: 'Dashboard' },
@@ -7,6 +8,7 @@ const navigation = [
 ]
 
 function Sidebar() {
+  const { logout } = useAuth()
   return (
     <aside className="sidebar">
       <p className="brand">WorkMind</p>
@@ -26,6 +28,11 @@ function Sidebar() {
           ))}
         </ul>
       </nav>
+      <div className="sidebar-footer">
+        <button className="navigation-link sidebar-logout" type="button" onClick={logout}>
+          로그아웃
+        </button>
+      </div>
     </aside>
   )
 }

@@ -20,6 +20,8 @@ h1 {
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 240px;
   padding: 24px 16px;
   background: #ffffff;
@@ -110,5 +112,18 @@ h1 {
   background: #fff;
   color: #243f64;
   font: inherit;
+  cursor: pointer;
+}
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.sidebar-logout {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
   cursor: pointer;
 }

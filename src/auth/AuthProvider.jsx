@@ -16,11 +16,11 @@ function AuthProvider({ children }) {
     const controller = new AbortController()
     client.get('/members/me', { signal: controller.signal })
       .then(({ data }) => {
-        if (controller.signal.aborted) return
+        if (controller.signal.aborted || sessionStorage.getItem(TOKEN_KEY) !== token) return
         setAuth({ token, user: data, status: 'authenticated' })
       })
       .catch((error) => {
-        if (controller.signal.aborted) return
+        if (controller.signal.aborted || sessionStorage.getItem(TOKEN_KEY) !== token) return
         if ([401, 403, 404].includes(error.response?.status)) {
           sessionStorage.removeItem(TOKEN_KEY)
           setAuth({ token: null, user: null, status: 'anonymous' })
@@ -41,13 +41,17 @@ function AuthProvider({ children }) {
     setAuth({ token: data.accessToken, user: null, status: 'checking' })
   }
 
+  function logout() {
+    sessionStorage.removeItem(TOKEN_KEY)
+    setAuth({ token: null, user: null, status: 'anonymous' })
+  }
   function retry() {
     setAuth((current) => ({ ...current, status: 'checking' }))
     setAttempt((current) => current + 1)
   }
 
   return (
-    <AuthContext.Provider value={{ ...auth, login, retry }}>
+    <AuthContext.Provider value={{ ...auth, login, logout, retry }}>
       {children}
     </AuthContext.Provider>
   )
